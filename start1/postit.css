@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@1,300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: black;
+}
+  
+.container{
+    padding-top: 40px;
+    background:#676161;
+    font-family: 'Shantell Sans', cursive;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+p {
+  font-size: 1.5rem;
+}
+.post{
+  margin: 15px;
+}
+
+.post{
+  color:black;
+  background:#ffc;
+  display:block;
+  height:10em;
+  width:10em;
+  padding:1em;
+  box-shadow: 5px 5px rgba(33,33,33,.7);
+  transform: rotate(-10deg);
+}
+
+/*even significa prendi elementi pari ovvero 2-4-6-8*/
+.post:nth-child(even) {
+  transform:rotate(5deg);
+  position:relative;
+  top:5px;
+  background:rgb(151, 199, 151);
+}
+/* 3n significa prendi ogni 3 elementi*/
+.post:nth-child(3n) {
+    transform:rotate(-3deg);
+    position:relative;
+    top:-5px;
+    background:rgb(165, 165, 233);
+  }
+
+.post:hover{
+  box-shadow:10px 10px rgba(0,0,0,.7);
+  transform: scale(1.5);/* in modo che che diventi grande*/
+  position:relative;
+  z-index: 1; /*in modo tale che all'hover venga visualizzato tutto il post senza avere qualcosa sopra che lo disturbi*/
+}
