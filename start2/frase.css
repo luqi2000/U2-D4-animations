@@ -8,3 +8,49 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+#testoAlternato {
+    border: 1px solid black;
+    padding:10px;
+    width: 450px;
+}
+
+#testoAlternato p {
+    font-weight: 700;
+}
+
+.parole {
+    position: relative;
+}
+
+.parole i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+
+.parole i:first-child {
+    animation: ruota 10s ease-in-out;
+}
+
+@keyframes ruota {
+    0% {
+        transform: rotateZ(0deg);
+        color: rgb(255, 132, 0);
+        opacity: 1;
+    }
+
+    50% {
+        color: rgb(197, 157, 45);
+
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        opacity: 1;
+        color: rgb(120, 51, 51);
+
+    }
+
+}
